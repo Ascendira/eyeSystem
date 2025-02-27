@@ -51,7 +51,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://8.147.220.2:8087',  # 允许的前端来源
+    'http://8.147.220.2:8088',  # 允许的前端来源
 ]
 
 ROOT_URLCONF = "eyeSystem.urls"
