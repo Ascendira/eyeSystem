@@ -12,12 +12,14 @@ class BaseInfo(models.Model):
         null=True, blank=True
     )
     name = models.CharField(max_length=255, verbose_name='姓名')
-    gender = models.CharField(max_length=10, verbose_name='性别')
+    gender = models.CharField(max_length=10, verbose_name='性别',
+                              null=True, blank=True)
     age = models.IntegerField(
         validators=[
             MinValueValidator(1, '年龄必须大于或等于1'),
             MaxValueValidator(100, '年龄必须小于或等于100')
-        ], verbose_name='年龄'
+        ], verbose_name='年龄',
+        null=True, blank=True
     )
     nation = models.CharField(max_length=255, verbose_name='民族', null=True, blank=True)
     habitation = models.CharField(max_length=255, verbose_name='居住地', null=True, blank=True)
