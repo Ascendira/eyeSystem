@@ -52,7 +52,7 @@ class PatientInfoView(View):
 
         try:
             data = json.loads(request.body)['data']
-            patient_id = data['id']
+            patient_id = data['patient_id']
             obj, created = mBaseInfo.objects.update_or_create(
                 patient_id=patient_id,
                 defaults={
