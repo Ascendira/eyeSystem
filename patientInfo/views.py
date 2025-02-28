@@ -23,7 +23,7 @@ response_template = {
 
 class BaseInfo(View):
     def get(self, request, pageNum, pageSize):
-        data = mBaseInfo.objects.all().order_by('-screen_date').values()
+        data = mBaseInfo.objects.all().order_by('-diagnosis_date').values()
         data = list(data)
         length = len(data)
         l = pageNum * pageSize
