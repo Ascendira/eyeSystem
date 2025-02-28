@@ -46,7 +46,7 @@ class PatientInfoView(View):
     def post(self, request, date):
         try:
             naive_date = datetime.strptime(date, "%Y-%m-%d-%H-%M-%S")
-            screen_date = timezone.make_aware(naive_date)
+            diagnosis_date = timezone.make_aware(naive_date)
         except ValueError:
             return JsonResponse({'success': False, 'errCode': 400, 'message': 'Date Format Error'}, status=400)
 
@@ -65,6 +65,7 @@ class PatientInfoView(View):
                     'school': data['school'],
                     'grade': data['grade'],
                     'screen_date': data['screen_date'],
+                    'diagnosis_date': diagnosis_date,
                     'glasses_worn_type': data['glasses_worn_type'],
                     'other_glasses_worn_type': data['other_glasses_worn_type'],
                 }
