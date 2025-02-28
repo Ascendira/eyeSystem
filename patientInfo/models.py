@@ -28,7 +28,7 @@ class BaseInfo(models.Model):
     habitation = models.CharField(max_length=255, verbose_name='居住地', null=True, blank=True)
     school = models.CharField(max_length=255, verbose_name='学校', null=True, blank=True)
     grade = models.CharField(max_length=15, verbose_name='年级', null=True, blank=True)
-    screen_date = models.DateTimeField(verbose_name='筛查日期', null=True, blank=True)
+    screen_date = models.CharField(max_length=255, verbose_name='筛查日期', null=True, blank=True)
     diagnosis_date = models.DateTimeField(verbose_name='诊断日期', default=datetime.date.today)
     glasses_worn_type = models.CharField(max_length=255, verbose_name='戴镜类型', null=True, blank=True)
     other_glasses_worn_type = models.CharField(max_length=255, verbose_name='其他戴镜类型', null=True, blank=True)
