@@ -11,7 +11,8 @@ class BaseInfo(models.Model):
         verbose_name="联系电话",
         null=True, blank=True
     )
-    name = models.CharField(max_length=255, verbose_name='姓名')
+    name = models.CharField(max_length=255, verbose_name='姓名',
+                              null=True, blank=True)
     gender = models.CharField(max_length=10, verbose_name='性别',
                               null=True, blank=True)
     age = models.IntegerField(

@@ -64,7 +64,7 @@ class PatientInfoView(View):
                     'habitation': data['habitation'],
                     'school': data['school'],
                     'grade': data['grade'],
-                    'screen_date': screen_date,
+                    'screen_date': data['screen_date'],
                     'glasses_worn_type': data['glasses_worn_type'],
                     'other_glasses_worn_type': data['other_glasses_worn_type'],
                 }
